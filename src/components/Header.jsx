@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 
 const Header = () => {
     const [collapsed, setCollapsed] = useState(true);
@@ -34,33 +35,36 @@ const Header = () => {
                     </svg>
                 </button>
             </div>
-            <div className='w-full block flex-grow lg:flex lg:items-center lg:w-auto'>
-                {!collapsed && (
-                    <>
-                        <div className='text-sm lg:flex-grow'>
-                            <Link
-                                to='/'
-                                className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
-                            >
-                                Home
-                            </Link>
-                            <Link
-                                to='/about'
-                                className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
-                            >
-                                About-Us
-                            </Link>
-                        </div>
-                        <div>
-                            <Link
-                                to='/contact'
-                                className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0'
-                            >
-                                Contact-Us
-                            </Link>
-                        </div>
-                    </>
+            <div
+                className={classNames(
+                    'w-full block flex-grow lg:flex lg:items-center lg:w-auto',
+                    { 'hidden md:block': collapsed }
                 )}
+            >
+                <>
+                    <div className='text-sm lg:flex-grow'>
+                        <Link
+                            to='/'
+                            className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            to='/about'
+                            className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
+                        >
+                            About-Us
+                        </Link>
+                    </div>
+                    <div>
+                        <Link
+                            to='/contact'
+                            className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0'
+                        >
+                            Contact-Us
+                        </Link>
+                    </div>
+                </>
             </div>
         </nav>
     );
