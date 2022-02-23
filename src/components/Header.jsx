@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const Header = () => {
     const [collapsed, setCollapsed] = useState(true);
     return (
-        <nav className='flex items-center justify-between flex-wrap bg-teal-500 p-6'>
+        <nav className='flex items-center justify-between flex-wrap bg-mdlightbrown p-6'>
             <div className='flex items-center flex-shrink-0 text-white mr-6'>
                 <svg
                     className='fill-current h-8 w-8 mr-2'
@@ -45,13 +45,13 @@ const Header = () => {
                     <div className='text-sm lg:flex-grow'>
                         <Link
                             to='/'
-                            className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
+                            className='block mt-4 lg:inline-block lg:mt-0 text-lightbrown hover:text-white mr-4'
                         >
                             Home
                         </Link>
                         <Link
                             to='/about'
-                            className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
+                            className='block mt-4 lg:inline-block lg:mt-0 text-lightbrown hover:text-white mr-4'
                         >
                             About-Us
                         </Link>
@@ -59,11 +59,20 @@ const Header = () => {
                     <div>
                         <Link
                             to='/contact'
-                            className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0'
+                            className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-darkbrown hover:bg-white mt-4 lg:mt-0'
                         >
                             Contact-Us
                         </Link>
                     </div>
+                    <div>
+                        <Link
+                            to='/products'
+                            className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-darkbrown hover:bg-white mt-4 lg:mt-0'
+                        >
+                            Contact-Us
+                        </Link>
+                    </div>
+
                 </>
             </div>
         </nav>
